@@ -1,6 +1,8 @@
 # English 
 This docker image builds libTensorFlow-1.15 (Cuda-10.1) library from source files.
 
+Depending on the operating system used (Ubuntu 16.04, 18.04), gcc compiler will use different versions of the glibc library, which may be critical for some projects. For Ubuntu 18.04, glibc-2.27 is used, while for Ubuntu 16.04, glibc-2.24 is used.
+
 Build the image and launch the container
 ```bash
 docker build . -t libtensorflowbuild
@@ -17,6 +19,8 @@ LibTensorFlow-1.15 binary files for Cuda-10.1 are available in the [Releases](ht
 
 # Russian
 Данный образ собирает из исходников библиотеку libTensorFlow-1.15 (Cuda-10.1).
+
+В зависимости от используемой операционной системы (Ubuntu 16.04, 18.04) компилятор gcc будет использовать различные версии библиотеки glibc, что может быть критично для некоторых проектов. Для Ubuntu 18.04 используется glibc-2.27, для Ubuntu 16.04 используется glibc-2.24.
 
 ## Сборка образа и запуск контейнера
 ```bash
